@@ -18,25 +18,29 @@ console.log(getComputerChoice())
 // Displays winner output based on player vs computer selection
 function playRound(playerSelection, computerSelection) {
    if (playerSelection === computerSelection) {
-       console.log('Tie');
+       return('Tie');
 
    } else if (
-      (playerSelection === 'rock' && computerSelection === 'scissors')
-      (playerSelection === 'paper' && computerSelection === 'rock')
-      (playerSelection === 'scissors' && computerSelection === 'paper')
-    ){    console.log('Player Wins') 
+      (playerSelection === 'rock' && computerSelection === 'scissors') ||
+      (playerSelection === 'paper' && computerSelection === 'rock') ||
+      (playerSelection === 'scissors' && computerSelection === 'paper'))
+    {    return('Player Wins') 
 
      } else if (
-      (computerSelection === 'rock' && playerSelection === 'scissors')
-      (computerSelection === 'paper' && playerSelection === 'rock')
-      (computerSelection === 'scissors' && playerSelection === 'paper')
-      ){    console.log('Computer Wins')      
+      (computerSelection === 'rock' && playerSelection === 'scissors') ||
+      (computerSelection === 'paper' && playerSelection === 'rock') ||
+      (computerSelection === 'scissors' && playerSelection === 'paper'))
+      {    return('Computer Wins')      
 
      } else {
-         console.log('Invalid Choice')
+           return('Invalid Choice')
      }
  }
 
+// tests playerRound function
+// const playerSelection = "rock";
+// const computerSelection = getComputerChoice();
+// console.log(playRound(playerSelection, computerSelection));
 
 
 
