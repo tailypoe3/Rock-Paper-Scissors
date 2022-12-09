@@ -1,6 +1,7 @@
+//Sets up computer "player" to randomly chose between rock, paper, scissor
 function getComputerChoice() {
-  let randomChoice = Math.floor(Math.random() * 3);
-    switch(randomChoice) {
+  let computerSelection = Math.floor(Math.random() * 3);
+    switch(computerSelection) {
       case 0:
         return 'rock';
         break;
@@ -14,15 +15,32 @@ function getComputerChoice() {
   }
 console.log(getComputerChoice())
 
+// Displays winner output based on player vs computer selection
+function playRound(playerSelection, computerSelection) {
+   if (playerSelection === computerSelection) {
+       console.log('Tie');
+
+   } else if (
+      (playerSelection === 'rock' && computerSelection === 'scissors')
+      (playerSelection === 'paper' && computerSelection === 'rock')
+      (playerSelection === 'scissors' && computerSelection === 'paper')
+    ){    console.log('Player Wins') 
+
+     } else if (
+      (computerSelection === 'rock' && playerSelection === 'scissors')
+      (computerSelection === 'paper' && playerSelection === 'rock')
+      (computerSelection === 'scissors' && playerSelection === 'paper')
+      ){    console.log('Computer Wins')      
+
+     } else {
+         console.log('Invalid Choice')
+     }
+ }
 
 
-// function playRound(playerSelection, computerSelection) {
-  
-// }
 
-// const playerSelection = 'Rock';
-// const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));
+
+
 
 // function game() {
 //   for(let i = 0; i < 5; i++)
